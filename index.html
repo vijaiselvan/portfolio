@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vijai Selvan | Java Backend Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+    <header>
+      <h1>Vijai Selvan</h1>
+      <p>
+        Java Backend Developer | Spring Boot • MongoDB • REST APIs • Responsive
+        UI
+      </p>
+    </header>
+
+    <div class="container">
+      <section class="about reveal-section">
+        <h2>About Me</h2>
+        <img src="./Profile.jpg" alt="Vijai Selvan" />
+        <p>
+          I'm a backend developer who doesn’t just write code — I build recovery
+          paths, solve real-world data issues, and think in terms of system
+          resilience and business impact. I specialize in clean, modular Spring
+          Boot APIs backed by MongoDB, and have front-end experience designing
+          responsive websites with modern HTML/CSS.
+        </p>
+        <a href="resume.pdf" target="_blank">Download Resume</a>
+      </section>
+
+      <section class="experience reveal-section">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+          <div class="exp-card" onclick="openModal('modal1')">
+            <div class="exp-header">
+              <div class="exp-role">
+                <h3>Associate</h3>
+                <span class="exp-company">Cognizant</span>
+              </div>
+              <div class="exp-year">Oct 2023 – Present</div>
+            </div>
+            <p><strong>Project:</strong> ELZ Flat File Recovery API</p>
+          </div>
+
+          <div class="exp-card" onclick="openModal('modal2')">
+            <div class="exp-header">
+              <div class="exp-role">
+                <h3>Programmer Analyst</h3>
+                <span class="exp-company">Cognizant</span>
+              </div>
+              <div class="exp-year">Sep 2022 – Oct 2023</div>
+            </div>
+            <p><strong>Project:</strong> Customer Address Validation</p>
+          </div>
+
+          <div class="exp-card" onclick="openModal('modal3')">
+            <div class="exp-header">
+              <div class="exp-role">
+                <h3>Programmer Analyst Trainee</h3>
+                <span class="exp-company">Cognizant</span>
+              </div>
+              <div class="exp-year">Sep 2021 – Sep 2022</div>
+            </div>
+            <p><strong>Role:</strong> Data & Submission Issue Investigator</p>
+          </div>
+
+          <div class="exp-card" onclick="openModal('modal4')">
+            <div class="exp-header">
+              <div class="exp-role">
+                <h3>Frontend Developer</h3>
+                <span class="exp-company">GMC Council</span>
+              </div>
+              <div class="exp-year">Apr 2020 – Dec 2020</div>
+            </div>
+            <p><strong>Project:</strong> www.gmccouncil.org</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modals -->
+      <div class="modal hide" id="modal1">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal1')">&times;</span>
+          <div class="modal-project-header">
+            <h3>ELZ Flat File Recovery API</h3>
+            <span class="modal-project-role">Internal Tool for Data Recovery</span>
+            <span class="modal-project-role" style="font-weight:600;color:#22223b;">Associate, Cognizant</span>
+          </div>
+          <ul class="modal-project-list">
+            <li>Developed a custom Spring Boot REST API in Java to recover and regenerate ELZ flat files missed due to pod restart during scheduled batch processing, restoring complete records for business-critical reporting.</li>
+            <li>Designed modular backend layers (Controller, Service, Repository, Mapper) to cleanly separate concerns and improve maintainability.</li>
+            <li>Integrated MongoDB using both Spring Data and MongoTemplate to query records based on business date and cut-off time logic.</li>
+            <li>Implemented file I/O logic to generate critical application data flat files (e.g., customer records and event logs) and store them on NAS in the required ELZ format for downstream systems.</li>
+            <li>Utilized Jackson to serialize and deserialize JSON payloads, enabling seamless communication between backend services and external systems.</li>
+            <li>Built robust logging and exception handling using SLF4J, ensuring traceability and debuggability during rerun execution.</li>
+            <li>Validated end-to-end data accuracy using Postman and MongoDB Compass; leveraged GitHub Copilot for faster coding iterations.</li>
+            <li>Gained hands-on experience in building resilient backend systems focused on data recovery, fault tolerance, and operational impact mitigation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal hide" id="modal2">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal2')">&times;</span>
+          <h3>Programmer Analyst – Cognizant</h3>
+          <ul>
+            <li>
+              Built backend APIs for customer address validation in credit card
+              onboarding.
+            </li>
+            <li>
+              Integrated encrypted third-party APIs using AES and SSL protocols.
+            </li>
+            <li>
+              Implemented address checks, XML/JSON parsing, and Spring beans for
+              REST clients.
+            </li>
+            <li>Added auditing with SLF4J and centralized logs.</li>
+            <li>
+              Worked with DevOps on Jenkins CI/CD pipelines and Spring property
+              configs.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal hide" id="modal3">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal3')">&times;</span>
+          <h3>Programmer Analyst Trainee – Cognizant</h3>
+          <ul>
+            <li>
+              Investigated onboarding issues via API/Splunk/state machines.
+            </li>
+            <li>
+              Used Python scripts and Jenkins reports to identify submission
+              errors.
+            </li>
+            <li>
+              Raised and triaged Jira tickets, analyzed data flows and payloads.
+            </li>
+            <li>
+              Used Quantum Metrics and production DB to investigate incomplete
+              data.
+            </li>
+            <li>
+              Contributed to metrics reporting and compliance investigations.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal hide" id="modal4">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal4')">&times;</span>
+          <h3>Frontend Developer – GMC Council</h3>
+          <ul>
+            <li>
+              Built www.gmccouncil.org using HTML5, CSS3, Bootstrap, and
+              JavaScript.
+            </li>
+            <li>
+              Created mobile-first responsive UI with engaging design and
+              animations.
+            </li>
+            <li>Optimized images, used semantic markup, and modular CSS.</li>
+            <li>
+              Added downloadable materials and dynamic sections for students.
+            </li>
+            <li>
+              Recognized by council leadership for transforming student
+              engagement online.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="contact reveal-section">
+        <h2>Contact Me</h2>
+        <p>
+          Let’s connect! I’m open to backend or full-stack roles and
+          collaboration.
+        </p>
+        <a href="mailto:vijayselvanvj@gmail.com">Email</a>
+        <a href="https://github.com/vijaiselvan" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/vijai-selvan-a5490018b" target="_blank"
+          >LinkedIn</a
+        >
+      </section>
+    </div>
+
+    <footer>© 2025 Vijai Selvan. All rights reserved.</footer>
+    <script>
+      // Scroll animation for sections
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".reveal-section");
+        const observer = new window.IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("section-visible");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        sections.forEach((section) => observer.observe(section));
+      });
+
+      function openModal(id) {
+        document.getElementById(id).classList.remove("hide");
+      }
+      function closeModal(id) {
+        document.getElementById(id).classList.add("hide");
+      }
+      window.onclick = function (event) {
+        document.querySelectorAll(".modal").forEach((modal) => {
+          if (event.target === modal) modal.classList.add("hide");
+        });
+      };
+    </script>
+  </body>
+</html>
