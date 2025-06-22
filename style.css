@@ -316,18 +316,25 @@ footer {
   display: none !important;
 }
 .modal-content {
-  background-color: #fff;
-  margin: 0;
-  /* Increased top and right padding to prevent overlap with close button */
-  padding: 2rem 2rem 3.2rem 1.2rem;
-  border-radius: 18px;
+  padding: 0; /* Remove padding here, move to .modal-inner */
+  position: relative;
   max-width: 480px;
-  width: 95vw;
+  width: 100%;
   max-height: 80vh;
-  overflow-y: auto;
+  background: #fff;
+  border-radius: 18px;
   box-shadow: 0 8px 32px rgba(37, 99, 235, 0.13), 0 2px 8px rgba(0, 0, 0, 0.08);
   animation: modalFadeIn 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.modal-inner {
   position: relative;
+  padding: 2rem 2rem 2rem 1.2rem; /* reduce bottom padding for desktop */
+  height: 100%;
+  min-height: 300px;
+  max-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding-bottom: 4.2rem; /* add extra bottom padding for close button */
 }
 @keyframes modalFadeIn {
   from {
@@ -363,12 +370,10 @@ footer {
   margin: 0;
 }
 .close {
-  position: fixed;
-  bottom: 2.2rem;
-  right: 2.2rem;
-  left: auto;
-  top: auto;
-  z-index: 2000;
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  z-index: 10;
   font-size: 2.1rem;
   font-weight: bold;
   color: #2563eb;
@@ -440,13 +445,13 @@ footer {
 /* Modal Responsive Styles */
 @media (max-width: 600px) {
   .modal-content {
-    /* Restore previous padding for mobile */
-    padding: 1.2rem 1.2rem 3.2rem 0.5rem;
-    max-width: 99vw;
+    max-width: 98vw;
+    width: 100%;
     font-size: 0.98rem;
   }
-  .modal-project-header {
-    padding-left: 0.6rem;
+  .modal-inner {
+    padding: 1.2rem 1.2rem 3.2rem 0.5rem; /* keep extra bottom padding for mobile */
+    max-height: 80vh;
   }
   .close {
     bottom: 1.2rem;

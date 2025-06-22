@@ -92,98 +92,106 @@
       <!-- Modals -->
       <div class="modal hide" id="modal1">
         <div class="modal-content">
+          <div class="modal-inner">
+            <div class="modal-project-header">
+              <h3>ELZ Flat File Recovery API</h3>
+              <span class="modal-project-role">Internal Tool for Data Recovery</span>
+              <span class="modal-project-role" style="font-weight:600;color:#22223b;">Associate, Cognizant</span>
+            </div>
+            <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
+              Designed a backend tool to restore ELZ flat files lost due to batch failure, ensuring business continuity and accurate reporting in a banking environment.
+            </div>
+            <ul class="modal-project-list">
+              <li>Developed a Spring Boot REST API in Java to extract missed records from MongoDB and regenerate ELZ flat files, supporting downstream data restoration after pod restart issues during scheduled batch runs.</li>
+              <li>Designed modular backend layers (Controller, Service, Repository, Mapper) to cleanly separate concerns and improve maintainability.</li>
+              <li>Integrated MongoDB using both Spring Data and MongoTemplate to query records based on business date and cut-off time logic.</li>
+              <li>Implemented file I/O logic to generate critical application data flat files (e.g., customer records and event logs) and store them on NAS in the required ELZ format for downstream systems.</li>
+              <li>Utilized Jackson to serialize and deserialize JSON payloads, enabling seamless communication between backend services and external systems.</li>
+              <li>Built robust logging and exception handling using SLF4J, ensuring traceability and debuggability during rerun execution.</li>
+              <li>Validated end-to-end data accuracy using Postman and MongoDB Compass; leveraged GitHub Copilot for faster coding iterations.</li>
+              <li>Gained hands-on experience in building resilient backend systems focused on data recovery, fault tolerance, and operational impact mitigation.</li>
+            </ul>
+          </div>
           <span class="close" onclick="closeModal('modal1')">&times;</span>
-          <div class="modal-project-header">
-            <h3>ELZ Flat File Recovery API</h3>
-            <span class="modal-project-role">Internal Tool for Data Recovery</span>
-            <span class="modal-project-role" style="font-weight:600;color:#22223b;">Associate, Cognizant</span>
-          </div>
-          <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
-            Designed a backend tool to restore ELZ flat files lost due to batch failure, ensuring business continuity and accurate reporting in a banking environment.
-          </div>
-          <ul class="modal-project-list">
-            <li>Developed a Spring Boot REST API in Java to extract missed records from MongoDB and regenerate ELZ flat files, supporting downstream data restoration after pod restart issues during scheduled batch runs.</li>
-            <li>Designed modular backend layers (Controller, Service, Repository, Mapper) to cleanly separate concerns and improve maintainability.</li>
-            <li>Integrated MongoDB using both Spring Data and MongoTemplate to query records based on business date and cut-off time logic.</li>
-            <li>Implemented file I/O logic to generate critical application data flat files (e.g., customer records and event logs) and store them on NAS in the required ELZ format for downstream systems.</li>
-            <li>Utilized Jackson to serialize and deserialize JSON payloads, enabling seamless communication between backend services and external systems.</li>
-            <li>Built robust logging and exception handling using SLF4J, ensuring traceability and debuggability during rerun execution.</li>
-            <li>Validated end-to-end data accuracy using Postman and MongoDB Compass; leveraged GitHub Copilot for faster coding iterations.</li>
-            <li>Gained hands-on experience in building resilient backend systems focused on data recovery, fault tolerance, and operational impact mitigation.</li>
-          </ul>
         </div>
       </div>
       <div class="modal hide" id="modal2">
         <div class="modal-content">
+          <div class="modal-inner">
+            <div class="modal-project-header">
+              <h3>Customer Address Validation Integration</h3>
+              <span class="modal-project-role">Java | Spring | REST | JSON/XML Parsing</span>
+              <span class="modal-project-role" style="font-weight:600;color:#22223b;">Programmer Analyst, Cognizant</span>
+            </div>
+            <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
+              Developed as part of a customer acquisition platform within credit card application flow for a leading US-based bank to validate and standardize addresses before account creation.
+            </div>
+            <ul class="modal-project-list">
+              <li>Designed & implemented backend services using Java and the Spring Framework to validate customer addresses via external APIs, significantly reducing failed deliveries and manual corrections.</li>
+              <li>Served as a middleware layer between upstream onboarding systems and downstream decision engines, ensuring validated address data flowed reliably through the customer acquisition process.</li>
+              <li>Configured and wired Spring beans for REST clients, SAO components and credential utilities using dependency injection, promoting clean separation and maintainability.</li>
+              <li>Integrated AES encryption and SSL/TLS protocols as per the bank’s enterprise security standards to securely invoke third-party validation APIs and ensure compliant credential handling.</li>
+              <li>Processed and interpreted validation responses to perform internal checks (e.g., PO Box, postal code match, service-down indicators), driving downstream decisions based on address quality.</li>
+              <li>Implemented Jackson-based data mappers to parse and normalize JSON/XML address validation responses, ensuring consistent data transformation across Dev, IT, UAT, and Prod environments.</li>
+              <li>Applied business rules to scrub, standardize, and enrich address data before further processing or storage.</li>
+              <li>Handled exceptions and service outages with Spring-managed error flows and custom exception classes, improving system resilience and reliability.</li>
+              <li>Instrumented logging & auditing with SLF4J and centralized audit tables, improving traceability and accelerating root cause analysis.</li>
+              <li>Collaborated with the DevOps team managing Jenkins-based CI/CD pipelines, ensuring successful deployments by externalizing environment-specific configurations using Spring properties.</li>
+            </ul>
+          </div>
           <span class="close" onclick="closeModal('modal2')">&times;</span>
-          <div class="modal-project-header">
-            <h3>Customer Address Validation Integration</h3>
-            <span class="modal-project-role">Java | Spring | REST | JSON/XML Parsing</span>
-            <span class="modal-project-role" style="font-weight:600;color:#22223b;">Programmer Analyst, Cognizant</span>
-          </div>
-          <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
-            Developed as part of a customer acquisition platform within credit card application flow for a leading US-based bank to validate and standardize addresses before account creation.
-          </div>
-          <ul class="modal-project-list">
-            <li>Designed & implemented backend services using Java and the Spring Framework to validate customer addresses via external APIs, significantly reducing failed deliveries and manual corrections.</li>
-            <li>Served as a middleware layer between upstream onboarding systems and downstream decision engines, ensuring validated address data flowed reliably through the customer acquisition process.</li>
-            <li>Configured and wired Spring beans for REST clients, SAO components and credential utilities using dependency injection, promoting clean separation and maintainability.</li>
-            <li>Integrated AES encryption and SSL/TLS protocols as per the bank’s enterprise security standards to securely invoke third-party validation APIs and ensure compliant credential handling.</li>
-            <li>Processed and interpreted validation responses to perform internal checks (e.g., PO Box, postal code match, service-down indicators), driving downstream decisions based on address quality.</li>
-            <li>Implemented Jackson-based data mappers to parse and normalize JSON/XML address validation responses, ensuring consistent data transformation across Dev, IT, UAT, and Prod environments.</li>
-            <li>Applied business rules to scrub, standardize, and enrich address data before further processing or storage.</li>
-            <li>Handled exceptions and service outages with Spring-managed error flows and custom exception classes, improving system resilience and reliability.</li>
-            <li>Instrumented logging & auditing with SLF4J and centralized audit tables, improving traceability and accelerating root cause analysis.</li>
-            <li>Collaborated with the DevOps team managing Jenkins-based CI/CD pipelines, ensuring successful deployments by externalizing environment-specific configurations using Spring properties.</li>
-          </ul>
         </div>
       </div>
       <div class="modal hide" id="modal3">
         <div class="modal-content">
+          <div class="modal-inner">
+            <div class="modal-project-header">
+              <h3>Application Data Reconciliation & Backend Remediation</h3>
+              <span class="modal-project-role">Customer Acquisition Platform</span>
+              <span class="modal-project-role" style="font-weight:600;color:#22223b;">Programmer Analyst Trainee, Cognizant</span>
+            </div>
+            <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
+              Contributed to a project focused on improving backend reliability and customer onboarding experience by investigating application submission failures, remediating data flow issues, and proactively reducing future lost applications for a major banking client.
+            </div>
+            <ul class="modal-project-list">
+              <li>Investigated backend submission issues by analyzing API interactions with external systems responsible for customer verification, eligibility checks, and automated decision-making.</li>
+              <li>Utilized tools like Splunk, internal log viewers, and state machine flow diagrams to debug backend workflows, identify logic errors, and trace application lifecycle failures.</li>
+              <li>Analyzed weekly application data extracts generated by automated Python scripts via Jenkins, ensuring data accuracy across customer onboarding flows.</li>
+              <li>Collaborated with product and engineering teams to raise and triage Jira tickets, documenting issue patterns, root causes, and fix validations.</li>
+              <li>Extracted and structured customer application data from production databases to support the resolution of failed submissions and enable customer outreach.</li>
+              <li>Investigated incomplete or incorrect data flows by inspecting backend system transitions and reviewing request/response payloads from integrated APIs.</li>
+              <li>Worked with cloned backend repositories and system logs to support debugging of business rule logic, submission paths, and application state errors.</li>
+              <li>Used Quantum Metrics to correlate customer interactions on the UI with backend API behaviour, identifying inconsistencies in full-stack workflows.</li>
+              <li>Participated in monthly metrics reporting, tracking recurring backend issues and prioritizing them based on frequency and business impact.</li>
+              <li>Reviewed data discrepancies in extract files, compliance-triggered errors, and email communication mismatches using internal tooling, ensuring end-to-end data consistency.</li>
+            </ul>
+          </div>
           <span class="close" onclick="closeModal('modal3')">&times;</span>
-          <div class="modal-project-header">
-            <h3>Application Data Reconciliation & Backend Remediation</h3>
-            <span class="modal-project-role">Customer Acquisition Platform</span>
-            <span class="modal-project-role" style="font-weight:600;color:#22223b;">Programmer Analyst Trainee, Cognizant</span>
-          </div>
-          <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
-            Contributed to a project focused on improving backend reliability and customer onboarding experience by investigating application submission failures, remediating data flow issues, and proactively reducing future lost applications for a major banking client.
-          </div>
-          <ul class="modal-project-list">
-            <li>Investigated backend submission issues by analyzing API interactions with external systems responsible for customer verification, eligibility checks, and automated decision-making.</li>
-            <li>Utilized tools like Splunk, internal log viewers, and state machine flow diagrams to debug backend workflows, identify logic errors, and trace application lifecycle failures.</li>
-            <li>Analyzed weekly application data extracts generated by automated Python scripts via Jenkins, ensuring data accuracy across customer onboarding flows.</li>
-            <li>Collaborated with product and engineering teams to raise and triage Jira tickets, documenting issue patterns, root causes, and fix validations.</li>
-            <li>Extracted and structured customer application data from production databases to support the resolution of failed submissions and enable customer outreach.</li>
-            <li>Investigated incomplete or incorrect data flows by inspecting backend system transitions and reviewing request/response payloads from integrated APIs.</li>
-            <li>Worked with cloned backend repositories and system logs to support debugging of business rule logic, submission paths, and application state errors.</li>
-            <li>Used Quantum Metrics to correlate customer interactions on the UI with backend API behaviour, identifying inconsistencies in full-stack workflows.</li>
-            <li>Participated in monthly metrics reporting, tracking recurring backend issues and prioritizing them based on frequency and business impact.</li>
-            <li>Reviewed data discrepancies in extract files, compliance-triggered errors, and email communication mismatches using internal tooling, ensuring end-to-end data consistency.</li>
-          </ul>
         </div>
       </div>
       <div class="modal hide" id="modal4">
         <div class="modal-content">
+          <div class="modal-inner">
+            <div class="modal-project-header">
+              <h3>Designed & Developed www.gmccouncil.org</h3>
+              <span class="modal-project-role">A Student-Centric Educational Platform</span>
+              <span class="modal-project-role" style="font-weight:600;color:#22223b;">Frontend Developer, GMC Council</span>
+            </div>
+            <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
+              Delivered a fully responsive, mobile-friendly website for Great Minds Competency Council - enriched with joyful animations, playful icons, and education-themed illustrations to reflect the spirit of learning and student engagement.
+            </div>
+            <ul class="modal-project-list">
+              <li>Independently planned, designed, and developed the council’s official website using HTML5, CSS3, Bootstrap, and JavaScript - now live and serving as the organization’s primary digital presence.</li>
+              <li>Transformed raw ideas into a live product, designing intuitive layouts, clean navigation, and accessible content that improved information flow and visitor engagement by 70% (based on stakeholder feedback).</li>
+              <li>Infused the website with vibrant animations, playful icons, and student-friendly illustrations, thoughtfully pairing colour themes, typography, and visual elements to reflect the organization’s personality and create a joyful, education-focused user experience.</li>
+              <li>Integrated downloadable study materials, brochures, and dynamic content sections, helping students and parents easily access academic resources.</li>
+              <li>Delivered a visually polished and fast-loading site, following front-end performance best practices — image optimization, semantic markup, and modular CSS - ensuring excellent UX and SEO readiness.</li>
+              <li>Handled full project lifecycle from gathering requirements and prototyping UI/UX to final deployment - demonstrating end-to-end ownership and delivery capability.</li>
+              <li>Delivered a professional, easy-to-maintain website with well-documented code, allowing non-technical users to manage content updates with minimal support.</li>
+              <li>Received personal recognition from the council leadership for creating a digital platform that transformed manual student engagement into an accessible, modern web experience.</li>
+            </ul>
+          </div>
           <span class="close" onclick="closeModal('modal4')">&times;</span>
-          <div class="modal-project-header">
-            <h3>Designed & Developed www.gmccouncil.org</h3>
-            <span class="modal-project-role">A Student-Centric Educational Platform</span>
-            <span class="modal-project-role" style="font-weight:600;color:#22223b;">Frontend Developer, GMC Council</span>
-          </div>
-          <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
-            Delivered a fully responsive, mobile-friendly website for Great Minds Competency Council - enriched with joyful animations, playful icons, and education-themed illustrations to reflect the spirit of learning and student engagement.
-          </div>
-          <ul class="modal-project-list">
-            <li>Independently planned, designed, and developed the council’s official website using HTML5, CSS3, Bootstrap, and JavaScript - now live and serving as the organization’s primary digital presence.</li>
-            <li>Transformed raw ideas into a live product, designing intuitive layouts, clean navigation, and accessible content that improved information flow and visitor engagement by 70% (based on stakeholder feedback).</li>
-            <li>Infused the website with vibrant animations, playful icons, and student-friendly illustrations, thoughtfully pairing colour themes, typography, and visual elements to reflect the organization’s personality and create a joyful, education-focused user experience.</li>
-            <li>Integrated downloadable study materials, brochures, and dynamic content sections, helping students and parents easily access academic resources.</li>
-            <li>Delivered a visually polished and fast-loading site, following front-end performance best practices — image optimization, semantic markup, and modular CSS - ensuring excellent UX and SEO readiness.</li>
-            <li>Handled full project lifecycle from gathering requirements and prototyping UI/UX to final deployment - demonstrating end-to-end ownership and delivery capability.</li>
-            <li>Delivered a professional, easy-to-maintain website with well-documented code, allowing non-technical users to manage content updates with minimal support.</li>
-            <li>Received personal recognition from the council leadership for creating a digital platform that transformed manual student engagement into an accessible, modern web experience.</li>
-          </ul>
         </div>
       </div>
 
