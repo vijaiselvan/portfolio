@@ -1,4 +1,4 @@
-/* All CSS moved from the HTML <style> tag */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +11,8 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
 }
+
+/* Header Styles */
 header {
   position: relative;
   background: url("Header.jpg") center/cover no-repeat;
@@ -58,6 +60,8 @@ header p {
     transform: translateY(0);
   }
 }
+
+/* Container and Section Layout */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -77,6 +81,8 @@ section:hover > h2 {
   color: #2563eb;
   border-color: #1d4ed8;
 }
+
+/* About Section */
 .about {
   display: flex;
   flex-direction: column;
@@ -117,6 +123,8 @@ section:hover > h2 {
 .about a:hover {
   background: #1d4ed8;
 }
+
+/* Timeline and Experience Cards */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -139,6 +147,18 @@ section:hover > h2 {
   box-shadow: 0 8px 32px rgba(37, 99, 235, 0.13);
   border-left: 6px solid #1d4ed8;
 }
+
+/* Highlight selected experience card when modal is open */
+.exp-card.selected,
+.exp-card.selected:hover {
+  border-left: 6px solid #f59e42 !important;
+  box-shadow: 0 8px 32px rgba(245, 158, 66, 0.18), 0 2px 8px rgba(0,0,0,0.08) !important;
+  background: linear-gradient(90deg, #fff7ed 70%, #f8fafc 100%) !important;
+  transform: translateY(-10px) scale(1.03) !important;
+  transition: box-shadow 0.3s, border-color 0.3s, background 0.3s !important;
+  z-index: 2;
+}
+
 .exp-header {
   display: flex;
   justify-content: space-between;
@@ -175,8 +195,23 @@ section:hover > h2 {
   font-size: 0.95rem;
   color: #4b5563;
 }
+
+/* Contact Section */
 .contact {
   text-align: center;
+}
+.contact h2 {
+  display: inline-block;
+  border-left: 6px solid #2563eb;
+  padding-left: 0.8rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  text-align: left;
+  transition: color 0.4s, border-color 0.4s;
+}
+.contact:hover > h2 {
+  color: #2563eb;
+  border-color: #1d4ed8;
 }
 .contact p {
   margin: 1rem 0;
@@ -194,12 +229,16 @@ section:hover > h2 {
 .contact a:hover {
   background: #2563eb;
 }
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   color: #9ca3af;
   background: #f1f5f9;
 }
+
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -220,6 +259,8 @@ footer {
     transform: translateY(0);
   }
 }
+
+/* Section Reveal Animation */
 .reveal-section {
   opacity: 0;
   transform: translateY(60px);
@@ -230,6 +271,8 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
@@ -255,6 +298,7 @@ footer {
   }
 }
 
+/* Modal Styles */
 .modal {
     display: flex;
     align-items: center;
@@ -369,7 +413,9 @@ footer {
     font-size: 0.8em;
     top: 0.5em;
   }
-  @media (max-width: 600px) {
+
+/* Modal Responsive Styles */
+@media (max-width: 600px) {
     .modal-content {
       padding: 0.7rem 0.2rem 1rem 0.2rem;
       max-width: 99vw;
@@ -377,5 +423,41 @@ footer {
     }
     .modal-project-header {
       padding-left: 0.6rem;
+    }
+  }
+  @media (min-width: 769px) {
+    .modal {
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+    .modal-content {
+      max-width: 480px;
+      width: 420px;
+      height: 100vh;
+      max-height: 100vh;
+      border-radius: 18px 0 0 18px;
+      margin: 0;
+      right: 0;
+      top: 0;
+      left: auto;
+      position: fixed;
+      animation: modalSlideInRight 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: -8px 0 32px rgba(37,99,235,0.13), -2px 0 8px rgba(0,0,0,0.08);
+    }
+    @keyframes modalSlideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
+    }
+    .modal {
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
     }
   }
