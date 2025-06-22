@@ -204,6 +204,7 @@
     <footer>© 2025 Vijai Selvan. All rights reserved.</footer>
     <script>
       // Scroll animation for sections
+      // Scroll animation for sections
       document.addEventListener("DOMContentLoaded", function () {
         const sections = document.querySelectorAll(".reveal-section");
         const observer = new window.IntersectionObserver(
@@ -221,14 +222,29 @@
       });
 
       function openModal(id) {
-        document.getElementById(id).classList.remove("hide");
+        const modal = document.getElementById(id);
+        modal.classList.remove("hide");
+        modal.classList.remove("fade-out");
       }
+
       function closeModal(id) {
-        document.getElementById(id).classList.add("hide");
+        const modal = document.getElementById(id);
+        modal.classList.add("fade-out");
+        setTimeout(() => {
+          modal.classList.add("hide");
+          modal.classList.remove("fade-out");
+        }, 400);
       }
+
       window.onclick = function (event) {
         document.querySelectorAll(".modal").forEach((modal) => {
-          if (event.target === modal) modal.classList.add("hide");
+          if (event.target === modal && !modal.classList.contains("hide")) {
+            modal.classList.add("fade-out");
+            setTimeout(() => {
+              modal.classList.add("hide");
+              modal.classList.remove("fade-out");
+            }, 400);
+          }
         });
       };
     </script>
