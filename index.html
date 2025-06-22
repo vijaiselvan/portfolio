@@ -56,7 +56,9 @@
               </div>
               <div class="exp-year">Sep 2022 – Oct 2023</div>
             </div>
-            <p><strong>Project:</strong> Customer Address Validation</p>
+            <p>
+              <strong>Project:</strong> Customer Address Validation Integration – Java | Spring | REST | JSON/XML Parsing
+            </p>
           </div>
 
           <div class="exp-card" onclick="openModal('modal3')">
@@ -107,24 +109,25 @@
       <div class="modal hide" id="modal2">
         <div class="modal-content">
           <span class="close" onclick="closeModal('modal2')">&times;</span>
-          <h3>Programmer Analyst – Cognizant</h3>
-          <ul>
-            <li>
-              Built backend APIs for customer address validation in credit card
-              onboarding.
-            </li>
-            <li>
-              Integrated encrypted third-party APIs using AES and SSL protocols.
-            </li>
-            <li>
-              Implemented address checks, XML/JSON parsing, and Spring beans for
-              REST clients.
-            </li>
-            <li>Added auditing with SLF4J and centralized logs.</li>
-            <li>
-              Worked with DevOps on Jenkins CI/CD pipelines and Spring property
-              configs.
-            </li>
+          <div class="modal-project-header">
+            <h3>Customer Address Validation Integration</h3>
+            <span class="modal-project-role">Java | Spring | REST | JSON/XML Parsing</span>
+            <span class="modal-project-role" style="font-weight:600;color:#22223b;">Programmer Analyst, Cognizant</span>
+          </div>
+          <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
+            Developed as part of a customer onboarding platform within credit card application flow for a leading US-based bank to validate and standardize addresses before account creation.
+          </div>
+          <ul class="modal-project-list">
+            <li>Designed & implemented backend services using Java and the Spring Framework to validate customer addresses via external APIs, significantly reducing failed deliveries and manual corrections.</li>
+            <li>Served as a middleware layer between upstream onboarding systems and downstream decision engines, ensuring validated address data flowed reliably through the customer acquisition process.</li>
+            <li>Configured and wired Spring beans for REST clients, SAO components and credential utilities using dependency injection, promoting clean separation and maintainability.</li>
+            <li>Integrated AES encryption and SSL/TLS protocols as per the bank’s enterprise security standards to securely invoke third-party validation APIs and ensure compliant credential handling.</li>
+            <li>Processed and interpreted validation responses to perform internal checks (e.g., PO Box, postal code match, service-down indicators), driving downstream decisions based on address quality.</li>
+            <li>Implemented Jackson-based data mappers to parse and normalize JSON/XML address validation responses, ensuring consistent data transformation across Dev, IT, UAT, and Prod environments.</li>
+            <li>Applied business rules to scrub, standardize, and enrich address data before further processing or storage.</li>
+            <li>Handled exceptions and service outages with Spring-managed error flows and custom exception classes, improving system resilience and reliability.</li>
+            <li>Instrumented logging & auditing with SLF4J and centralized audit tables, improving traceability and accelerating root cause analysis.</li>
+            <li>Collaborated with the DevOps team managing Jenkins-based CI/CD pipelines, ensuring successful deployments by externalizing environment-specific configurations using Spring properties.</li>
           </ul>
         </div>
       </div>
@@ -224,4 +227,5 @@
       };
     </script>
   </body>
+</html>
 </html>
