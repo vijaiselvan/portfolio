@@ -36,15 +36,22 @@
 
       <section class="skills reveal-section">
         <h2>Skills</h2>
-        <div class="skills-list">
-          <span class="skill-item">Java</span>
-          <span class="skill-item">Spring Boot</span>
-          <span class="skill-item">MongoDB</span>
-          <span class="skill-item">REST APIs</span>
-          <span class="skill-item">HTML</span>
-          <span class="skill-item">CSS</span>
-          <span class="skill-item">Responsive UI</span>
-          <!-- Add more skills as needed -->
+        <div class="skills-tabs-nav" id="skillsTabsNav">
+          <button class="skills-tab active" data-tab="backend" type="button">
+            Backend
+          </button>
+          <button class="skills-tab" data-tab="frontend" type="button">
+            Frontend
+          </button>
+          <button class="skills-tab" data-tab="tools" type="button">
+            Tools
+          </button>
+          <button class="skills-tab" data-tab="others" type="button">
+            Others
+          </button>
+        </div>
+        <div class="skills-tabs-content">
+          <div class="skills-list" id="skills-list"></div>
         </div>
       </section>
 
@@ -269,6 +276,46 @@
           }
         });
       };
+
+      // Skills tabs logic (dynamic rendering)
+      document.addEventListener("DOMContentLoaded", function () {
+        // Skills data
+        const skillsData = {
+          backend: [
+            "Java", "Spring Boot", "REST API", "MongoDB", "SQL", "JSON", "XML",
+            "Microservices", "File I/O", "Logging", "Jenkins", "Postman", "Git"
+          ],
+          frontend: [
+            "HTML5", "CSS3", "JavaScript", "React", "Bootstrap", "Responsive Design"
+          ],
+          tools: [
+            "MongoDB Compass", "Splunk", "Jira", "VS Code", "IntelliJ"
+          ],
+          others: [
+            "Production Support", "RCA", "Agile", "Debugging", "Documentation"
+          ]
+        };
+
+        const tabButtons = document.querySelectorAll('.skills-tab');
+        const skillsList = document.getElementById('skills-list');
+
+        function renderSkills(group) {
+          skillsList.innerHTML = skillsData[group]
+            .map(skill => `<span class="skill-item">${skill}</span>`)
+            .join('');
+        }
+
+        // Initial render
+        renderSkills('backend');
+
+        tabButtons.forEach(btn => {
+          btn.addEventListener('click', function () {
+            tabButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderSkills(btn.dataset.tab);
+          });
+        });
+      });
     </script>
   </body>
 </html>
