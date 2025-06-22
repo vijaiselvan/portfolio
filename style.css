@@ -637,13 +637,4 @@ footer {
     display: none !important;
   }
 }
-.modal.fade-out {
-  pointer-events: none;
-}
 
-.modal.hide {
-  display: none !important;
-}
-.modal.hide {
-  display: none !important;
-}
