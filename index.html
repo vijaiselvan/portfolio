@@ -144,9 +144,12 @@
               <span class="modal-project-role">Java | Spring | REST | JSON/XML Parsing</span>
               <span class="modal-project-role" style="font-weight:600;color:#22223b;">Programmer Analyst, Cognizant</span>
             </div>
-            <div class="modal-tabs-nav">
-              <button class="modal-tab active" data-tab="proj1" type="button">Customer Address Validation</button>
-              <button class="modal-tab" data-tab="proj2" type="button">ACAT Account Aggregation</button>
+            <div class="modal-project-dropdown-wrap">
+              <label for="modal2-project-dropdown" class="modal-project-dropdown-label">Project:</label>
+              <select id="modal2-project-dropdown" class="modal-project-dropdown">
+                <option value="proj1">Customer Address Validation</option>
+                <option value="proj2">ACAT Account Aggregation</option>
+              </select>
             </div>
             <div class="modal-tabs-content">
               <div class="modal-tab-panel active" id="modal2-proj1">
@@ -344,20 +347,18 @@
         });
       });
 
-      // Modal project tabs logic for modal2
+      // Modal project dropdown logic for modal2
       document.addEventListener("DOMContentLoaded", function () {
-        const modal2Tabs = document.querySelectorAll('#modal2 .modal-tab');
-        const modal2Panels = document.querySelectorAll('#modal2 .modal-tab-panel');
-        if (modal2Tabs.length && modal2Panels.length) {
-          modal2Tabs.forEach(tab => {
-            tab.addEventListener('click', function () {
-              modal2Tabs.forEach(t => t.classList.remove('active'));
-              modal2Panels.forEach(p => p.classList.remove('active'));
-              tab.classList.add('active');
-              // Hide all panels, then show the selected one
-              const panel = document.getElementById('modal2-' + tab.dataset.tab);
-              if (panel) panel.classList.add('active');
-            });
+        const dropdown = document.getElementById('modal2-project-dropdown');
+        const panels = [
+          document.getElementById('modal2-proj1'),
+          document.getElementById('modal2-proj2')
+        ];
+        if (dropdown && panels[0] && panels[1]) {
+          dropdown.addEventListener('change', function () {
+            panels.forEach(panel => panel.classList.remove('active'));
+            const selected = document.getElementById('modal2-' + dropdown.value);
+            if (selected) selected.classList.add('active');
           });
         }
       });
