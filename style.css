@@ -215,6 +215,9 @@ section:hover > h2 {
   color: #4b5563;
   font-weight: 500;
   margin-left: 2px;
+  margin-bottom: 0;
+  letter-spacing: 0.01em;
+  text-shadow: none;
 }
 .exp-card p {
   font-size: 0.95rem;
@@ -529,6 +532,7 @@ footer {
 .modal-project-list {
   list-style: none;
   padding-left: 1rem;
+  padding-bottom: 1rem; /* Add bottom padding for spacing */
   margin: 0;
 }
 .close {
@@ -611,6 +615,81 @@ footer {
   border-bottom: none;
   padding: 0.4rem 2rem 0.4rem 2rem;
   box-shadow: none;
+}
+.modal-company {
+  font-size: 1.01rem;
+  color: #f1f5f9;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 4px #1e3a8a22;
+  /* visually distinct from domain, but harmonious */
+}
+
+/* Redesigned Modal Project Header */
+.redesigned-header {
+  background: linear-gradient(100deg, #2563eb 60%, #60a5fa 100%);
+  box-shadow: 0 4px 24px 0 rgba(37,99,235,0.13), 0 1.5px 8px rgba(0,0,0,0.04);
+  border-radius: 1.2rem 0rem 0rem 0rem;
+  padding: 1.3rem 2rem 1.1rem 2rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+  backdrop-filter: blur(7px);
+  background-blend-mode: lighten;
+  border-bottom: 2.5px solid #e0e7ff;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.modal-header-main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.modal-header-main > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  min-width: 0;
+  flex: 1 1 0;
+}
+.modal-role {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.15rem;
+  text-shadow: 0 2px 8px #1e3a8a33;
+  word-break: break-word;
+  white-space: normal;
+}
+.modal-company {
+  font-size: 1.01rem;
+  color: #f1f5f9;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 4px #1e3a8a22;
+}
+.modal-domain {
+  font-size: 1.01rem;
+  color: #e0e7ff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 0;
+  text-shadow: 0 1px 4px #1e3a8a22;
+  word-break: break-word;
+  white-space: normal;
 }
 
 /* Modal Responsive Styles */
@@ -893,7 +972,7 @@ footer {
   gap: 0.7rem;
   margin-top: 0;
   margin-bottom: 1.2rem;
-  padding: 1.1rem 2.2rem 0.7rem 2.2rem;
+  padding: 1.1rem 0.5rem 0.7rem 0.5rem;
   background: #fff;
   box-shadow: 0 2px 12px rgba(37,99,235,0.04);
   border-radius: 0 0 1.2rem 1.2rem;
@@ -968,9 +1047,45 @@ footer {
   box-shadow: none !important;
   background: none !important;
 }
+.modal-project-dropdown-wrap {
+  max-width: 100vw;
+  margin-bottom: 0 !important;
+}
+.modal-project-dropdown-wrap::after {
+  display: none !important;
+}
+
+
+/* Hide old tab styles in modal2 */
+#modal2 .modal-tabs-nav,
+#modal2 .modal-tab {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+    
+
+/* Hide old tab styles in modal2 */
+#modal2 .modal-tabs-nav,
+#modal2 .modal-tab {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
   .modal-project-dropdown-wrap {
     max-width: 100vw;
-    margin-top: 1.7rem;
     margin-bottom: 0 !important;
   }
   .modal-project-dropdown-wrap::after {
