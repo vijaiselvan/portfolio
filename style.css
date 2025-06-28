@@ -672,6 +672,15 @@ footer {
     border-radius: 0 0 0.8rem 0.8rem !important;
     box-shadow: 0 2px 12px rgba(37,99,235,0.04) !important;
   }
+  .modal {
+    overflow-x: hidden !important;
+  }
+  .modal-content {
+    overflow-x: hidden !important;
+  }
+  .modal-inner {
+    overflow-x: hidden !important;
+  }
 }
 @media (max-width: 768px) and (min-width: 600px) {
   .modal-content {
