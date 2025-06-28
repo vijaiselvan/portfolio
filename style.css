@@ -929,6 +929,12 @@ footer {
   background-position: right 1.1rem center;
   background-size: 1.2em 1.2em;
 }
+.modal-project-dropdown-label {
+  font-size: 1.08rem;
+  color: #2563eb;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
 .modal-project-dropdown:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 2px #2563eb33;
