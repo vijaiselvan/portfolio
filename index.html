@@ -140,25 +140,52 @@
         <div class="modal-content">
           <div class="modal-inner">
             <div class="modal-project-header">
-              <h3>Customer Address Validation Integration</h3>
+              <h3>Programmer Analyst Projects</h3>
               <span class="modal-project-role">Java | Spring | REST | JSON/XML Parsing</span>
               <span class="modal-project-role" style="font-weight:600;color:#22223b;">Programmer Analyst, Cognizant</span>
             </div>
-            <div style="font-size:0.97em;color:#4b5563;margin-bottom:1rem;">
-              Developed as part of a customer acquisition platform within credit card application flow for a leading US-based bank to validate and standardize addresses before account creation.
+            <div class="modal-tabs-nav">
+              <button class="modal-tab active" data-tab="proj1" type="button">Customer Address Validation</button>
+              <button class="modal-tab" data-tab="proj2" type="button">ACAT Account Aggregation</button>
             </div>
-            <ul class="modal-project-list">
-              <li>Designed & implemented backend services using Java and the Spring Framework to validate customer addresses via external APIs, significantly reducing failed deliveries and manual corrections.</li>
-              <li>Served as a middleware layer between upstream onboarding systems and downstream decision engines, ensuring validated address data flowed reliably through the customer acquisition process.</li>
-              <li>Configured and wired Spring beans for REST clients, SAO components and credential utilities using dependency injection, promoting clean separation and maintainability.</li>
-              <li>Integrated AES encryption and SSL/TLS protocols as per the bank’s enterprise security standards to securely invoke third-party validation APIs and ensure compliant credential handling.</li>
-              <li>Processed and interpreted validation responses to perform internal checks (e.g., PO Box, postal code match, service-down indicators), driving downstream decisions based on address quality.</li>
-              <li>Implemented Jackson-based data mappers to parse and normalize JSON/XML address validation responses, ensuring consistent data transformation across Dev, IT, UAT, and Prod environments.</li>
-              <li>Applied business rules to scrub, standardize, and enrich address data before further processing or storage.</li>
-              <li>Handled exceptions and service outages with Spring-managed error flows and custom exception classes, improving system resilience and reliability.</li>
-              <li>Instrumented logging & auditing with SLF4J and centralized audit tables, improving traceability and accelerating root cause analysis.</li>
-              <li>Collaborated with the DevOps team managing Jenkins-based CI/CD pipelines, ensuring successful deployments by externalizing environment-specific configurations using Spring properties.</li>
-            </ul>
+            <div class="modal-tabs-content">
+              <div class="modal-tab-panel active" id="modal2-proj1">
+                <div class="modal-project-title">Customer Address Validation Integration</div>
+                <div class="modal-project-overview">
+                  Developed as part of a customer acquisition platform within the credit card application flow for a leading US-based bank to validate and standardize addresses before account creation. Helped strengthen data quality and regulatory compliance in the credit card application lifecycle, contributing to faster onboarding and fewer downstream exceptions.
+                </div>
+                <ul class="modal-project-list">
+                  <li>Designed & implemented backend services using Java and the Spring Framework to validate customer addresses via external APIs, significantly reducing failed deliveries and manual corrections.</li>
+                  <li>Served as a middleware layer between upstream onboarding systems and downstream decision engines, ensuring validated address data flowed reliably through the customer acquisition process.</li>
+                  <li>Configured and wired Spring beans for REST clients, SAO components and credential utilities using dependency injection, promoting clean separation and maintainability.</li>
+                  <li>Integrated AES encryption and SSL/TLS protocols as per the bank’s enterprise security standards to securely invoke third-party validation APIs and ensure compliant credential handling.</li>
+                  <li>Processed and interpreted validation responses to perform internal checks (e.g., PO Box, postal code match, service-down indicators), driving downstream decisions based on address quality.</li>
+                  <li>Implemented Jackson-based data mappers to parse and normalize JSON/XML address validation responses, ensuring consistent data transformation across Dev, IT, UAT, and Prod environments.</li>
+                  <li>Applied business rules to scrub, standardize, and enrich address data before further processing or storage.</li>
+                  <li>Handled exceptions and service outages with Spring-managed error flows and custom exception classes, improving system resilience and reliability.</li>
+                  <li>Instrumented logging & auditing with SLF4J and centralized audit tables, improving traceability and accelerating root cause analysis.</li>
+                  <li>Collaborated with the DevOps team managing Jenkins-based CI/CD pipelines, ensuring successful deployments by externalizing environment-specific configurations using Spring properties, accelerating release cycles and minimizing environment-specific defects.</li>
+                </ul>
+              </div>
+              <div class="modal-tab-panel" id="modal2-proj2">
+                <div class="modal-project-title">Investment Account Aggregation & ACAT Transfer</div>
+                <div class="modal-project-overview">
+                  This project was part of an enterprise-level Automated Customer Account Transfer (ACAT) system implemented for a leading U.S.-based financial institution to facilitate seamless investment asset transfers. The broader ecosystem included components such as external account aggregation (Yodlee), document virus scanning (MetaDefender), and firm validation (NSCC). My contributions were focused on the secure integration and auditing of internal account aggregation APIs, enabling the retrieval and filtering of investment account data for ACAT eligibility checks. I designed and implemented REST-based backend services with compliance-grade auditing, secure authentication, and business-rule filtering logic to ensure accurate, traceable, and regulation-ready backend operations.
+                </div>
+                <ul class="modal-project-list">
+                  <li>Developed and integrated secure RESTful services to fetch investment account data from internal systems, forming the backend foundation for asset transfer eligibility within ACAT (Automated Customer Account Transfer) workflows.</li>
+                  <li>Implemented business rule-driven filtering logic to evaluate account eligibility using key attributes such as product codes, ownership structure, and account status, aligning with regulatory and business mandates.</li>
+                  <li>Secured inter-service communication using Basic Authentication, dynamic credential management, and correlation ID tagging to ensure traceable and auditable API interactions across distributed systems.</li>
+                  <li>Enabled compliance-grade auditing by capturing structured request/response logs and transaction metadata, supporting transparency, root-cause analysis, and adherence to financial regulations.</li>
+                  <li>Improved backend reliability by implementing robust exception handling and graceful degradation logic to manage service failures without disrupting the transfer process.</li>
+                  <li>Designed loosely coupled service interfaces to promote reusability, flexibility, and adherence to enterprise-wide architectural standards in multi-team environments.</li>
+                  <li>Created reusable and well-structured data models (DTOs) for request/response payloads, enabling clean API communication and seamless data transformation between service layers.</li>
+                  <li>Collaborated within the internal account aggregation layer of a broader ACAT system, contributing to a workflow that interfaced with document scanning (MetaDefender), external aggregation (Yodlee), and firm validation (NSCC) for full-process continuity.</li>
+                  <li>Improved operational accuracy and customer experience by ensuring only eligible accounts were surfaced during transfer requests, reducing errors and manual interventions in high-volume transaction flows.</li>
+                  <li>Delivered production-ready backend modules in a regulated financial environment, demonstrating expertise in secure integration, audit-focused development, and large-scale service integration in wealth management platforms.</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <span class="close" onclick="closeModal('modal2')">&times;</span>
         </div>
@@ -316,10 +343,24 @@
           });
         });
       });
-    </script>
-  </body>
-</html>
-</html>
+
+      // Modal project tabs logic for modal2
+      document.addEventListener("DOMContentLoaded", function () {
+        const modal2Tabs = document.querySelectorAll('#modal2 .modal-tab');
+        const modal2Panels = document.querySelectorAll('#modal2 .modal-tab-panel');
+        if (modal2Tabs.length && modal2Panels.length) {
+          modal2Tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+              modal2Tabs.forEach(t => t.classList.remove('active'));
+              modal2Panels.forEach(p => p.classList.remove('active'));
+              tab.classList.add('active');
+              // Hide all panels, then show the selected one
+              const panel = document.getElementById('modal2-' + tab.dataset.tab);
+              if (panel) panel.classList.add('active');
+            });
+          });
+        }
+      });
     </script>
   </body>
 </html>
