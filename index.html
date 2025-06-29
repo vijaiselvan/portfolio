@@ -392,13 +392,13 @@
           </a>
           <a href="https://linkedin.com/in/vijai-selvan-a5490018b" target="_blank" class="contact-card" title="LinkedIn">
             <span class="contact-icon">
-              <!-- LinkedIn icon (GitHub-style, outline, no filled circle) -->
+              <!-- LinkedIn icon: clean, modern, outline, visually balanced, no filled circle -->
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="18" height="18" rx="3" stroke="#2563eb" stroke-width="2" fill="none"/>
-                <path d="M8 10v6" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="8" cy="8" r="1" stroke="#2563eb" stroke-width="2" fill="none"/>
-                <path d="M13 16v-3c0-.6.4-1 1-1s1 .4 1 1v3" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
-                <path d="M12 13h2" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                <rect x="3" y="3" width="18" height="18" rx="4" stroke="#2563eb" stroke-width="2" fill="none"/>
+                <path d="M8 10.5v5" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="8" cy="8" r="1.2" stroke="#2563eb" stroke-width="2" fill="none"/>
+                <path d="M13 15.5v-2.5c0-.7.3-1.2 1.1-1.2.8 0 1.1.5 1.1 1.2v2.5" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+                <path d="M13 13.5h2" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </span>
             <span class="contact-label">LinkedIn</span>
@@ -526,6 +526,51 @@
         }
       });
     </script>
+    <script>
+      document.querySelectorAll('.contact-card').forEach(card => {
+        card.addEventListener('mousedown', function() {
+          card.classList.add('clicked');
+        });
+        card.addEventListener('mouseup', function() {
+          setTimeout(() => card.classList.remove('clicked'), 120);
+        });
+        card.addEventListener('mouseleave', function() {
+          card.classList.remove('clicked');
+        });
+      });
+    </script>
+    <script>
+      // Remove focus from contact cards after tap/click to prevent highlight on mobile and desktop
+      document.querySelectorAll('.contact-card').forEach(card => {
+        // For mouse and keyboard users
+        card.addEventListener('mousedown', function() {
+          setTimeout(() => card.blur(), 0);
+        });
+        card.addEventListener('mouseup', function() {
+          setTimeout(() => card.blur(), 0);
+        });
+        card.addEventListener('click', function() {
+          setTimeout(() => card.blur(), 0);
+        });
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            setTimeout(() => card.blur(), 0);
+          }
+        });
+        // For touch devices (mobile/tablet)
+        card.addEventListener('touchstart', function() {
+          setTimeout(() => card.blur(), 0);
+        }, {passive: true});
+        card.addEventListener('touchend', function() {
+          setTimeout(() => card.blur(), 0);
+        }, {passive: true});
+        card.addEventListener('touchcancel', function() {
+          setTimeout(() => card.blur(), 0);
+        }, {passive: true});
+      });
+    </script>
   </body>
+</html>
+</html>
 </html>
 </html>

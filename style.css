@@ -281,6 +281,51 @@ section:hover > h2 {
 .contact-card:active {
   transform: scale(0.98);
 }
+.contact-card:active,
+.contact-card.clicked {
+  background: #f1f5f9 !important;
+  color: #22223b !important;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.06) !important;
+  border-color: #e0e7ef !important;
+  transform: scale(0.98) !important;
+}
+.contact-card:focus {
+  outline: none;
+  /* Prevent browser focus ring */
+}
+.contact-card:active .contact-icon svg,
+.contact-card.clicked .contact-icon svg {
+  stroke: #2563eb !important;
+  color: #2563eb !important;
+  opacity: 1 !important;
+}
+.contact-card:active .contact-icon svg rect,
+.contact-card.clicked .contact-icon svg rect {
+  stroke: #2563eb !important;
+  fill: none !important;
+}
+.contact-card:active .contact-icon svg circle,
+.contact-card.clicked .contact-icon svg circle {
+  stroke: #2563eb !important;
+  fill: none !important;
+  opacity: 1 !important;
+}
+.contact-card:active .contact-icon svg path,
+.contact-card.clicked .contact-icon svg path {
+  stroke: #2563eb !important;
+  fill: none !important;
+}
+/* Remove hover/focus styles when active or .clicked */
+.contact-card:active:hover,
+.contact-card.clicked:hover,
+.contact-card:active:focus,
+.contact-card.clicked:focus {
+  background: #f1f5f9 !important;
+  color: #22223b !important;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.06) !important;
+  border-color: #e0e7ef !important;
+  transform: scale(0.98) !important;
+}
 .contact-icon {
   margin-bottom: 0.7em;
   display: flex;
@@ -372,15 +417,15 @@ footer {
 /* Section Reveal Animation */
 .reveal-section {
   opacity: 0;
-  transform: translateY(60px);
+  transform: translateY(40px); /* reduced from 60px for faster appearance */
   transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
-    transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    transform 0.8s cubic-bezier(0.23, 1, 0.32, 1); /* faster transition */
   animation: none;
 }
 .section-visible {
   opacity: 1;
   transform: translateY(0);
-  animation: fadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fadeIn 0.8s cubic-bezier(0.23, 1, 0.32, 1); /* faster animation */
 }
 
 /* Enhanced Skills Section */
