@@ -386,11 +386,9 @@ footer {
 }
 .skills-tabs-content {
   width: 100%;
-  background: #fff;
-  border-radius: 0 0 1.2rem 1.2rem;
   /* Move box-shadow to the bullet points area only */
   box-shadow: none;
-  padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.8rem 0.5rem 0.5rem 0.5rem;
   min-height: 120px;
   position: relative;
   overflow: visible;
