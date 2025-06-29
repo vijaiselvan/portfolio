@@ -141,7 +141,7 @@
               <div class="modal-tab-panel active" id="modal1-proj1">
                 <div class="modal-project-title">ELZ Flat File Recovery API</div>
                 <div class="modal-project-overview">
-                  Designed a backend tool to restore ELZ flat files lost due to batch failure, ensuring business continuity and accurate reporting in a banking environment.
+                  Developed a backend recovery API to manually retrieve and regenerate critical ELZ flat files lost due to a failed batch process triggered by a pod restart in a production banking environment. This tool enabled 100% data restoration based on user-provided business dates, ensuring uninterrupted downstream reporting for high-priority financial products.
                 </div>
                 <div class="modal-project-skills">
                   <span class="modal-skill-badge">Java</span>
@@ -155,11 +155,11 @@
                   <span class="modal-skill-badge">GitHub Copilot</span>
                 </div>
                 <ul class="modal-project-list">
-                  <li>Developed a Spring Boot REST API in Java to extract missed records from MongoDB and regenerate ELZ flat files, supporting downstream data restoration after pod restart issues during scheduled batch runs.</li>
-                  <li>Designed modular backend layers (Controller, Service, Repository, Mapper) to cleanly separate concerns and improve maintainability.</li>
-                  <li>Integrated MongoDB using both Spring Data and MongoTemplate to query records based on business date and cut-off time logic.</li>
-                  <li>Implemented file I/O logic to generate critical application data flat files (e.g., customer records and event logs) and store them on NAS in the required ELZ format for downstream systems.</li>
-                  <li>Utilized Jackson to serialize and deserialize JSON payloads, enabling seamless communication between backend services and external systems.</li>
+                  <li>Developed a Java Spring Boot REST API to extract missed records from MongoDB and regenerate ELZ flat files, enabling seamless data restoration after batch failures due to pod restarts.</li>
+                  <li>Structured modular backend layers (Controller, Service, Repository, Mapper) to ensure clean separation of concerns and high maintainability.</li>
+                  <li>Queried MongoDB using Spring Data and MongoTemplate with business date and cut-off time logic for accurate data selection.</li>
+                  <li>Built file I/O logic to generate critical application and event flat files in ELZ format, and stored them on NAS for downstream consumption.</li>
+                  <li>Used Jackson for JSON serialization/deserialization, enabling smooth data exchange between backend systems.</li>
                   <li>Built robust logging and exception handling using SLF4J, ensuring traceability and debuggability during rerun execution.</li>
                   <li>Validated end-to-end data accuracy using Postman and MongoDB Compass; leveraged GitHub Copilot for faster coding iterations.</li>
                   <li>Gained hands-on experience in building resilient backend systems focused on data recovery, fault tolerance, and operational impact mitigation.</li>
