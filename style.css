@@ -386,6 +386,14 @@ footer {
 }
 .skills-tabs-content {
   width: 100%;
+  background: #fff;
+  border-radius: 0 0 1.2rem 1.2rem;
+  /* Move box-shadow to the bullet points area only */
+  box-shadow: none;
+  padding: 1.2rem 0.5rem 0.5rem 0.5rem;
+  min-height: 120px;
+  position: relative;
+  overflow: visible;
 }
 .skills-list {
   display: flex;
@@ -852,9 +860,12 @@ footer {
   width: 100%;
   background: #fff;
   border-radius: 0 0 1.2rem 1.2rem;
-  box-shadow: 0 2px 12px rgba(37,99,235,0.06);
-  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  /* Move box-shadow to the bullet points area only */
+  box-shadow: none;
+  padding: 1.2rem 0.5rem 0.5rem 0.5rem;
   min-height: 120px;
+  position: relative;
+  overflow: visible;
 }
 .modal-tab-panel {
   display: none;
@@ -884,6 +895,12 @@ footer {
 }
 .modal-project-list {
   margin-top: 0.7rem;
+  /* Subtle shadow for the bullet points area only */
+  box-shadow: 0 2px 8px rgba(37,99,235,0.04);
+  border-radius: 0 0 1.2rem 1.2rem;
+  background: #fff;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1.2rem;
 }
 .modal-project-list li {
   margin-bottom: 0.7rem;
