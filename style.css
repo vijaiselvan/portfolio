@@ -244,18 +244,99 @@ section:hover > h2 {
 .contact p {
   margin: 1rem 0;
 }
-.contact a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  background: #111827;
-  color: white;
-  text-decoration: none;
-  border-radius: 999px;
-  transition: background 0.3s;
+
+/* Modern contact card design */
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
-.contact a:hover {
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f1f5f9;
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.6rem 1rem 1.6rem;
+  text-decoration: none;
+  color: #22223b;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.06);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+  min-width: 110px;
+  min-height: 140px;
+  border: 2px solid #e0e7ef;
+  position: relative;
+}
+.contact-card:hover,
+.contact-card:focus {
   background: #2563eb;
+  color: #fff;
+  box-shadow: 0 6px 24px #2563eb22;
+  transform: translateY(-4px) scale(1.04);
+  border-color: #2563eb;
+}
+.contact-card:active {
+  transform: scale(0.98);
+}
+.contact-icon {
+  margin-bottom: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-card:hover .contact-icon svg,
+.contact-card:focus .contact-icon svg {
+  stroke: #fff !important;
+  /* Do not set fill here */
+}
+.contact-card:hover .contact-icon svg rect,
+.contact-card:focus .contact-icon svg rect {
+  /* Only hide the mail icon's outer square, not all rects */
+  stroke: none !important;
+  fill: none !important;
+}
+.contact-card:hover .contact-icon svg circle,
+.contact-card:focus .contact-icon svg circle {
+  stroke: #fff !important;
+  fill: #2563eb !important; /* Keep LinkedIn avatar visible */
+  opacity: 1 !important;    /* Ensure it's not faded */
+}
+.contact-card:hover .contact-icon svg path,
+.contact-card:focus .contact-icon svg path {
+  stroke: #fff !important;
+  fill: none !important; /* Use none to keep envelope/LinkedIn glyph outlined */
+}
+.contact-label {
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-top: 0.2em;
+  color: inherit;
+  text-align: center;
+}
+
+/* Responsive for contact cards */
+@media (max-width: 700px) {
+  .contact-cards {
+    gap: 1.1rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .contact-card {
+    padding: 0.8rem 0.7rem 0.7rem 0.7rem;
+    min-width: 90px;
+    min-height: 110px;
+  }
+  .contact-label {
+    font-size: 0.97rem;
+  }
+  .contact-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
 }
 
 /* Footer */
@@ -488,7 +569,7 @@ footer {
   background: #fff;
   border-radius: 18px;
   /* Updated box-shadow for a more minimal, subtle effect */
-  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.08), 0 1.5px 8px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.08), 0 1.5px 8px rgba(0, 0, 0, 0.03);
   animation: modalFadeIn 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   display: flex;
   flex-direction: column;
