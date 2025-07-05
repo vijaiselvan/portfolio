@@ -100,10 +100,6 @@ h2 {
   margin-bottom: 1.5rem;
   transition: color 0.4s, border-color 0.4s;
 }
-section:hover > h2 {
-  color: #2563eb;
-  border-color: #1d4ed8;
-}
 
 /* About Section */
 .about {
@@ -236,10 +232,6 @@ section:hover > h2 {
   margin-top: 0;
   text-align: left;
   transition: color 0.4s, border-color 0.4s;
-}
-.contact:hover > h2 {
-  color: #2563eb;
-  border-color: #1d4ed8;
 }
 .contact p {
   margin: 1rem 0;
