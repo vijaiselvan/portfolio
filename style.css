@@ -21,14 +21,9 @@ body {
   :root {
     --vh: 1vh;
   }
-  /* Remove height: calc(var(--vh, 1vh) * 100); from header */
   header {
-    /* Remove problematic height properties */
-    min-height: 260px;
-    max-height: none;
-    height: auto;
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
+    height: calc(var(--vh, 1vh) * 100);
+    padding: 2rem;
   }
 }
 
@@ -1308,5 +1303,6 @@ footer {
     padding: 0.09rem 0.5rem;
   }
 }
+
 
 
