@@ -21,10 +21,14 @@ body {
   :root {
     --vh: 1vh;
   }
+  /* Remove height: calc(var(--vh, 1vh) * 100); from header */
   header {
-    height: calc(var(--vh, 1vh) * 100);
-    min-height: 320px;
-    max-height: 100dvh;
+    /* Remove problematic height properties */
+    min-height: 260px;
+    max-height: none;
+    height: auto;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
   }
 }
 
