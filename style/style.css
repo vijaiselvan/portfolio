@@ -30,7 +30,7 @@ body {
 /* Header Styles */
 header {
   position: relative;
-  background: url("header-3.jpg") center/cover no-repeat;
+  background: url("../assets/header-3.webp") center/cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
