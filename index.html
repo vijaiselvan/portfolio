@@ -98,7 +98,7 @@
               <div class="exp-year">Sep 2021 – Sep 2022</div>
             </div>
             <p>
-              <strong>Project:</strong> Application Data Reconciliation & Backend Remediation - Customer Acquisition Platform
+              <strong>Projects:</strong> <strong>1.</strong> Application Data Reconciliation & Backend Remediation - Customer Acquisition Platform, <strong>2.</strong> NHID Rotation for PCI 4.0 Compliance - Secure Credential Management
             </p>
           </div>
 
@@ -217,12 +217,40 @@
             <div class="modal-project-dropdown-wrap">
               <label for="modal2-project-dropdown" class="modal-project-dropdown-label">Project:</label>
               <select id="modal2-project-dropdown" class="modal-project-dropdown">
-                <option value="proj2">ACAT Account Aggregation</option>
-                <option value="proj1">Customer Address Validation</option>
+                <option value="proj1">ACAT Account Aggregation</option>
+                <option value="proj2">Customer Address Validation</option>
               </select>
             </div>
             <div class="modal-tabs-content">
-              <div class="modal-tab-panel" id="modal2-proj1">
+              <div class="modal-tab-panel active" id="modal2-proj1">
+                <div class="modal-project-title">Investment Account Aggregation & ACAT Transfer</div>
+                <div class="modal-project-overview">
+                  This project focused on securely retrieving customer investment account data from internal systems to support ACAT eligibility checks. While the broader ecosystem included services like external aggregation (Yodlee) and document virus scanning (MetaDefender), my contribution centered on secure data integration and compliance-level auditing of internal APIs
+                </div>
+                <div class="modal-project-skills">
+                  <span class="modal-skill-badge">Java</span>
+                  <span class="modal-skill-badge">Spring Boot</span>
+                  <span class="modal-skill-badge">REST API</span>
+                  <span class="modal-skill-badge">Basic Auth</span>
+                  <span class="modal-skill-badge">DTO</span>
+                  <span class="modal-skill-badge">Jenkins</span>
+                  <span class="modal-skill-badge">Logging</span>
+                  <span class="modal-skill-badge">Compliance</span>
+                </div>
+                <ul class="modal-project-list">
+                  <li>Developed and integrated secure RESTful services to fetch investment account data from internal systems, forming the backend foundation for asset transfer eligibility within ACAT (Automated Customer Account Transfer) workflows.</li>
+                  <li>Implemented business rule-driven filtering logic to evaluate account eligibility using key attributes such as product codes, ownership structure, and account status, aligning with regulatory and business mandates.</li>
+                  <li>Secured inter-service communication using Basic Authentication, dynamic credential management, and correlation ID tagging to ensure traceable and auditable API interactions across distributed systems.</li>
+                  <li>Enabled compliance-grade auditing by capturing structured request/response logs and transaction metadata, supporting transparency, root-cause analysis, and adherence to financial regulations.</li>
+                  <li>Improved backend reliability by implementing robust exception handling and graceful degradation logic to manage service failures without disrupting the transfer process.</li>
+                  <li>Designed loosely coupled service interfaces to promote reusability, flexibility, and adherence to enterprise-wide architectural standards in multi-team environments.</li>
+                  <li>Created reusable and well-structured data models (DTOs) for request/response payloads, enabling clean API communication and seamless data transformation between service layers.</li>
+                  <li>Collaborated within the internal account aggregation layer of a broader ACAT system, contributing to a workflow that interfaced with document scanning (MetaDefender), external aggregation (Yodlee), and firm validation (NSCC) for full-process continuity.</li>
+                  <li>Improved operational accuracy and customer experience by ensuring only eligible accounts were surfaced during transfer requests, reducing errors and manual interventions in high-volume transaction flows.</li>
+                  <li>Delivered production-ready backend modules in a regulated financial environment, demonstrating expertise in secure integration, audit-focused development, and large-scale service integration in wealth management platforms.</li>
+                </ul>
+              </div>
+              <div class="modal-tab-panel" id="modal2-proj2">
                 <div class="modal-project-title">Address Validation Middleware for RLOC Application Workflow</div>
                 <div class="modal-project-overview">
                   Developed as part of a customer acquisition platform within the Reserve Line of Credit (RLOC) application flow for a leading US-based bank to validate and standardize addresses before account creation. Helped strengthen data quality and regulatory compliance in the RLOC application lifecycle, contributing to faster onboarding and fewer downstream exceptions.
@@ -251,34 +279,6 @@
                   <li>Collaborated with the DevOps team managing Jenkins-based CI/CD pipelines, ensuring successful deployments by externalizing environment-specific configurations using Spring properties, accelerating release cycles and minimizing environment-specific defects.</li>
                 </ul>
               </div>
-              <div class="modal-tab-panel active" id="modal2-proj2">
-                <div class="modal-project-title">Investment Account Aggregation & ACAT Transfer</div>
-                <div class="modal-project-overview">
-                  This project focused on securely retrieving customer investment account data from internal systems to support ACAT eligibility checks. While the broader ecosystem included services like external aggregation (Yodlee) and document virus scanning (MetaDefender), my contribution centered on secure data integration and compliance-level auditing of internal APIs
-                </div>
-                <div class="modal-project-skills">
-                  <span class="modal-skill-badge">Java</span>
-                  <span class="modal-skill-badge">Spring Boot</span>
-                  <span class="modal-skill-badge">REST API</span>
-                  <span class="modal-skill-badge">Basic Auth</span>
-                  <span class="modal-skill-badge">DTO</span>
-                  <span class="modal-skill-badge">Jenkins</span>
-                  <span class="modal-skill-badge">Logging</span>
-                  <span class="modal-skill-badge">Compliance</span>
-                </div>
-                <ul class="modal-project-list">
-                  <li>Developed and integrated secure RESTful services to fetch investment account data from internal systems, forming the backend foundation for asset transfer eligibility within ACAT (Automated Customer Account Transfer) workflows.</li>
-                  <li>Implemented business rule-driven filtering logic to evaluate account eligibility using key attributes such as product codes, ownership structure, and account status, aligning with regulatory and business mandates.</li>
-                  <li>Secured inter-service communication using Basic Authentication, dynamic credential management, and correlation ID tagging to ensure traceable and auditable API interactions across distributed systems.</li>
-                  <li>Enabled compliance-grade auditing by capturing structured request/response logs and transaction metadata, supporting transparency, root-cause analysis, and adherence to financial regulations.</li>
-                  <li>Improved backend reliability by implementing robust exception handling and graceful degradation logic to manage service failures without disrupting the transfer process.</li>
-                  <li>Designed loosely coupled service interfaces to promote reusability, flexibility, and adherence to enterprise-wide architectural standards in multi-team environments.</li>
-                  <li>Created reusable and well-structured data models (DTOs) for request/response payloads, enabling clean API communication and seamless data transformation between service layers.</li>
-                  <li>Collaborated within the internal account aggregation layer of a broader ACAT system, contributing to a workflow that interfaced with document scanning (MetaDefender), external aggregation (Yodlee), and firm validation (NSCC) for full-process continuity.</li>
-                  <li>Improved operational accuracy and customer experience by ensuring only eligible accounts were surfaced during transfer requests, reducing errors and manual interventions in high-volume transaction flows.</li>
-                  <li>Delivered production-ready backend modules in a regulated financial environment, demonstrating expertise in secure integration, audit-focused development, and large-scale service integration in wealth management platforms.</li>
-                </ul>
-              </div>
             </div>
           </div>
           <span class="close" onclick="closeModal('modal2')">&times;</span>
@@ -301,6 +301,7 @@
               <label for="modal3-project-dropdown" class="modal-project-dropdown-label">Project:</label>
               <select id="modal3-project-dropdown" class="modal-project-dropdown">
                 <option value="proj1">Apply Data Reconciliation</option>
+                <option value="proj2">NHID Rotation for PCI 4.0</option>
               </select>
             </div>
             <div class="modal-tabs-content">
@@ -333,7 +334,25 @@
                 </ul>
               </div>
               <div class="modal-tab-panel" id="modal3-proj2">
-                <!-- Empty panel for future/placeholder -->
+                <div class="modal-project-title">NHID Rotation for PCI 4.0 Compliance - Secure Credential Management</div>
+                <div class="modal-project-overview">
+                  As part of a compliance initiative in the banking domain, I enhanced credential security by migrating NHID database credentials from encrypted codebase values to a secure, dynamic retrieval system using HashiCorp Vault. This aligned with PCI DSS 4.0 standards and supported weekly reporting extracts. I collaborated with infrastructure and IAM teams for credential rotation and verified stable post-change application behavior.
+                </div>
+                <div class="modal-project-skills">
+                  <span class="modal-skill-badge">PCI Compliance</span>
+                  <span class="modal-skill-badge">HashiCorp Vault</span>
+                  <span class="modal-skill-badge">Secrets</span>
+                  <span class="modal-skill-badge">Access Control</span>
+                  <span class="modal-skill-badge">Secure Coding</span>
+                  <span class="modal-skill-badge">Incidents</span>
+                </div>
+                <ul class="modal-project-list">
+                  <li>Enabled PCI 4.0 compliance by replacing static, encrypted NHID credentials with Vault-managed secrets, enhancing security and auditability.</li>
+                  <li>Collaborated with ISS IAM Lifecycle & Controls team to perform live credential rotation through secure screen-sharing sessions, ensuring proper access control procedures.</li>
+                  <li>Refactored configuration and authentication logic to dynamically fetch secrets from HashiCorp Vault, eliminating hardcoded credentials from the application.</li>
+                  <li>Verified end-to-end functionality of weekly banking extract reports post-rotation, ensuring uninterrupted data delivery and operational continuity.</li>
+                  <li>Resolved credential management incident, coordinating with TO/SMEs and infrastructure teams to meet audit-readiness goals and prevent compliance risks.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -549,6 +568,22 @@
           dropdown.addEventListener('change', function () {
             panels.forEach(panel => panel.classList.remove('active'));
             const selected = document.getElementById('modal2-' + dropdown.value);
+            if (selected) selected.classList.add('active');
+          });
+        }
+      });
+
+      // Modal project dropdown logic for modal3
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdown = document.getElementById('modal3-project-dropdown');
+        const panels = [
+          document.getElementById('modal3-proj1'),
+          document.getElementById('modal3-proj2')
+        ];
+        if (dropdown && panels[0] && panels[1]) {
+          dropdown.addEventListener('change', function () {
+            panels.forEach(panel => panel.classList.remove('active'));
+            const selected = document.getElementById('modal3-' + dropdown.value);
             if (selected) selected.classList.add('active');
           });
         }
