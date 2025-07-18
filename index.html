@@ -73,7 +73,7 @@
               </div>
               <div class="exp-year">Oct 2023 – Present</div>
             </div>
-            <p><strong>Projects:</strong> <strong>1.</strong> ELZ Flat File Recovery API - Internal Tool for Data Recovery, <strong>2.</strong> FileNet API Migration - Secure OAuth2 Integration for Cloud Document Workflows</p>
+            <p><strong>Projects:</strong> <strong>1.</strong> ELZ Flat File Recovery API - Internal Tool for Data Recovery, <strong>2.</strong> FileNet API Migration - Secure OAuth2 Integration, <strong>3.</strong> NHID Rotation for PCI 4.0 Compliance</p>
           </div>
 
           <div class="exp-card" onclick="openModal('modal2')">
@@ -98,7 +98,7 @@
               <div class="exp-year">Sep 2021 – Sep 2022</div>
             </div>
             <p>
-              <strong>Projects:</strong> <strong>1.</strong> Application Data Reconciliation & Backend Remediation - Customer Acquisition Platform, <strong>2.</strong> NHID Rotation for PCI 4.0 Compliance - Secure Credential Management
+              <strong>Projects:</strong> <strong>1.</strong> Application Data Reconciliation & Backend Remediation - Customer Acquisition Platform, <strong>2.</strong> FDIC Freeze Support - Backend Ops Coordination
             </p>
           </div>
 
@@ -136,6 +136,7 @@
               <select id="modal1-project-dropdown" class="modal-project-dropdown">
                 <option value="proj1">ELZ Flat File Recovery API</option>
                 <option value="proj2">FileNet API Migration</option>
+                <option value="proj3">NHID Rotation for PCI 4.0</option>
               </select>
             </div>
             <div class="modal-tabs-content">
@@ -194,6 +195,27 @@
                   <li>Prevented service disruptions and legacy system failures by validating new token-driven upload flows across Dev, Test, and Production - prior to the retirement of older APIs.</li>
                   <li>Collaborated cross-functionally with EDM-FileNet and ACATS teams to coordinate rollout timelines, resolve integration blockers, and finalize multi-environment configurations.</li>
                   <li>Delivered a production-grade backend enhancement that reduced infrastructure dependencies, enhanced scalability, and aligned with the bank's long-term digital transformation goals.</li>
+                </ul>
+              </div>
+              <div class="modal-tab-panel" id="modal1-proj3">
+                <div class="modal-project-title">NHID Rotation for PCI 4.0 Compliance - Secure Credential Management</div>
+                <div class="modal-project-overview">
+                  As part of a compliance initiative in the banking domain, I enhanced credential security by migrating NHID database credentials from encrypted codebase values to a secure, dynamic retrieval system using HashiCorp Vault. This aligned with PCI DSS 4.0 standards and supported weekly reporting extracts. I collaborated with infrastructure and IAM teams for credential rotation and verified stable post-change application behavior.
+                </div>
+                <div class="modal-project-skills">
+                  <span class="modal-skill-badge">PCI DSS 4.0</span>
+                  <span class="modal-skill-badge">HashiCorp Vault</span>
+                  <span class="modal-skill-badge">Secrets</span>
+                  <span class="modal-skill-badge">Access Control</span>
+                  <span class="modal-skill-badge">Secure Coding</span>
+                  <span class="modal-skill-badge">Compliance</span>
+                </div>
+                <ul class="modal-project-list">
+                  <li>Enabled PCI 4.0 compliance by replacing static, encrypted NHID credentials with Vault-managed secrets, enhancing security and auditability.</li>
+                  <li>Collaborated with ISS IAM Lifecycle & Controls team to perform live credential rotation through secure screen-sharing sessions, ensuring proper access control procedures.</li>
+                  <li>Refactored configuration and authentication logic to dynamically fetch secrets from HashiCorp Vault, eliminating hardcoded credentials from the application.</li>
+                  <li>Verified end-to-end functionality of weekly banking extract reports post-rotation, ensuring uninterrupted data delivery and operational continuity.</li>
+                  <li>Resolved credential management incident, coordinating with TO/SMEs and infrastructure teams to meet audit-readiness goals and prevent compliance risks.</li>
                 </ul>
               </div>
             </div>
@@ -301,7 +323,7 @@
               <label for="modal3-project-dropdown" class="modal-project-dropdown-label">Project:</label>
               <select id="modal3-project-dropdown" class="modal-project-dropdown">
                 <option value="proj1">Apply Data Reconciliation</option>
-                <option value="proj2">NHID Rotation for PCI 4.0</option>
+                <option value="proj2">FDIC Freeze Activities</option>
               </select>
             </div>
             <div class="modal-tabs-content">
@@ -334,24 +356,25 @@
                 </ul>
               </div>
               <div class="modal-tab-panel" id="modal3-proj2">
-                <div class="modal-project-title">NHID Rotation for PCI 4.0 Compliance - Secure Credential Management</div>
+                <div class="modal-project-title">FDIC Freeze Support - Backend Ops Coordination</div>
                 <div class="modal-project-overview">
-                  As part of a compliance initiative in the banking domain, I enhanced credential security by migrating NHID database credentials from encrypted codebase values to a secure, dynamic retrieval system using HashiCorp Vault. This aligned with PCI DSS 4.0 standards and supported weekly reporting extracts. I collaborated with infrastructure and IAM teams for credential rotation and verified stable post-change application behavior.
+                  Contributed to regulatory readiness by coordinating activities around the annual FDIC Change Freeze in the UAT environment. Ensured the application displayed a controlled placeholder ("Gone Fishing") page by triggering infrastructure-level changes via NOC team coordination. Maintained timeline adherence, access control, and validated environment state before and after the freeze to support compliance, risk mitigation, and auditability.
                 </div>
                 <div class="modal-project-skills">
-                  <span class="modal-skill-badge">PCI Compliance</span>
-                  <span class="modal-skill-badge">HashiCorp Vault</span>
-                  <span class="modal-skill-badge">Secrets</span>
-                  <span class="modal-skill-badge">Access Control</span>
-                  <span class="modal-skill-badge">Secure Coding</span>
-                  <span class="modal-skill-badge">Incidents</span>
+                  <span class="modal-skill-badge">Banking</span>
+                  <span class="modal-skill-badge">Infrastructure</span>
+                  <span class="modal-skill-badge">Routing</span>
+                  <span class="modal-skill-badge">BIG-IP F5</span>
+                  <span class="modal-skill-badge">ServiceNow</span>
+                  <span class="modal-skill-badge">Compliance</span>
+                  <span class="modal-skill-badge">Governance</span>
                 </div>
                 <ul class="modal-project-list">
-                  <li>Enabled PCI 4.0 compliance by replacing static, encrypted NHID credentials with Vault-managed secrets, enhancing security and auditability.</li>
-                  <li>Collaborated with ISS IAM Lifecycle & Controls team to perform live credential rotation through secure screen-sharing sessions, ensuring proper access control procedures.</li>
-                  <li>Refactored configuration and authentication logic to dynamically fetch secrets from HashiCorp Vault, eliminating hardcoded credentials from the application.</li>
-                  <li>Verified end-to-end functionality of weekly banking extract reports post-rotation, ensuring uninterrupted data delivery and operational continuity.</li>
-                  <li>Resolved credential management incident, coordinating with TO/SMEs and infrastructure teams to meet audit-readiness goals and prevent compliance risks.</li>
+                  <li>Created ServiceNow Incidents and CTASKs to initiate freeze-related infrastructure actions in UAT, adhering to FDIC-mandated change control procedures.</li>
+                  <li>Coordinated with the Network Operations Center (NOC) to enable the BIG-IP pool on port 443 to route traffic to the “Gone Fishing” maintenance page, and disabled standard app pools during the freeze.</li>
+                  <li>Verified post-change application behavior by working with QA/testing teams to validate visibility of the placeholder page during freeze and restore normal functionality afterward.</li>
+                  <li>Ensured timely execution and rollback of freeze activities by tracking operational timelines and maintaining communication across infra and test teams.</li>
+                  <li>Contributed to audit-readiness and change traceability through precise incident documentation, freeze window compliance, and rollback validation.</li>
                 </ul>
               </div>
             </div>
@@ -546,9 +569,10 @@
         const dropdown1 = document.getElementById('modal1-project-dropdown');
         const panels1 = [
           document.getElementById('modal1-proj1'),
-          document.getElementById('modal1-proj2')
+          document.getElementById('modal1-proj2'),
+          document.getElementById('modal1-proj3')
         ];
-        if (dropdown1 && panels1[0] && panels1[1]) {
+        if (dropdown1 && panels1[0] && panels1[1] && panels1[2]) {
           dropdown1.addEventListener('change', function () {
             panels1.forEach(panel => panel.classList.remove('active'));
             const selected = document.getElementById('modal1-' + dropdown1.value);
