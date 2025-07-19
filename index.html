@@ -73,7 +73,7 @@
               </div>
               <div class="exp-year">Oct 2023 – Present</div>
             </div>
-            <p><strong>Projects:</strong> <strong>1.</strong> ELZ Flat File Recovery API - Internal Tool for Data Recovery, <strong>2.</strong> FileNet API Migration - Secure OAuth2 Integration, <strong>3.</strong> NHID Rotation for PCI 4.0 Compliance</p>
+            <p><strong>Projects:</strong> <strong>1.</strong> ELZ Flat File Recovery API - Internal Tool for Data Recovery, <strong>2.</strong> FileNet API Migration - Secure OAuth2 Integration with Azure Active Directory, <strong>3.</strong> NHID Rotation for PCI DSS 4.0 Compliance</p>
           </div>
 
           <div class="exp-card" onclick="openModal('modal2')">
@@ -85,7 +85,7 @@
               <div class="exp-year">Sep 2022 – Oct 2023</div>
             </div>
             <p>
-              <strong>Projects:</strong> <strong>1.</strong> Investment Account Aggregation and ACAT Transfer, <strong>2.</strong> Address Validation Middleware for Reserve Line of Credit (RLOC) Application Workflow
+              <strong>Projects:</strong> <strong>1.</strong> Investment Account Aggregation and ACAT Transfer, <strong>2.</strong> Address Validation Middleware for RLOC Application Workflow, <strong>3.</strong> CBB Lending - Post Submission Messaging Enhancement
             </p>
           </div>
 
@@ -241,6 +241,7 @@
               <select id="modal2-project-dropdown" class="modal-project-dropdown">
                 <option value="proj1">ACAT Account Aggregation</option>
                 <option value="proj2">Customer Address Validation</option>
+                <option value="proj3">CBB Lending Compliance</option>
               </select>
             </div>
             <div class="modal-tabs-content">
@@ -299,6 +300,33 @@
                   <li>Handled exceptions and service outages with Spring-managed error flows and custom exception classes, improving system resilience and reliability.</li>
                   <li>Instrumented logging & auditing with SLF4J and centralized audit tables, improving traceability and accelerating root cause analysis.</li>
                   <li>Collaborated with the DevOps team managing Jenkins-based CI/CD pipelines, ensuring successful deployments by externalizing environment-specific configurations using Spring properties, accelerating release cycles and minimizing environment-specific defects.</li>
+                </ul>
+              </div>
+              <div class="modal-tab-panel" id="modal2-proj3">
+                <div class="modal-project-title">CBB Lending - Post-Submission Messaging Enhancement for CLL Applications</div>
+                <div class="modal-project-overview">
+                  Improved the post-submission user experience for Consumer Line of Credit (CLL) applications by introducing dynamic messaging logic to handle “store-and-forward” scenarios-where backend systems could not immediately return a decision. The initiative ensured regulatory compliance, reduced re-submissions, and enhanced communication clarity across digital and assisted channels.
+                </div>
+                <div class="modal-project-skills">
+                  <span class="modal-skill-badge">Java</span>
+                  <span class="modal-skill-badge">Spring MVC</span>
+                  <span class="modal-skill-badge">UI/UX</span>
+                  <span class="modal-skill-badge">HTML</span>
+                  <span class="modal-skill-badge">JSP</span>
+                  <span class="modal-skill-badge">CAT</span>
+                  <span class="modal-skill-badge">Risk</span>
+                  <span class="modal-skill-badge">Governance</span>
+                  <span class="modal-skill-badge">Conditional Rendering</span>
+                  <span class="modal-skill-badge">i18n</span>
+                </div>
+                <ul class="modal-project-list">
+                  <li>Redesigned post-submission workflows using Java and Spring MVC to detect backend processing gaps (e.g., missing ACAPS IDs) and deliver context-aware user messages during “store-and-forward” decisioning scenarios.</li>
+                  <li>Developed tailored user communication logic across DIY and banker-assisted channels, leveraging JSP, HTML, and configuration-based messaging to ensure clarity during technical delays or backend review holds.</li>
+                  <li>Integrated backend status flags via JavaBeans and conditional logic, enabling dynamic UI rendering that reflected real-time application state and improved customer guidance post-submission.</li>
+                  <li>Standardized messaging behaviour across products and channels, externalizing content and labels using properties files and modular content templates for maintainability, messaging consistency and future scalability.</li>
+                  <li>Aligned with enterprise compliance standards by securing approvals from UX, Risk, and Change Advisory teams, ensuring audit-ready messaging and process transparency.</li>
+                  <li>Reduced re-submission attempts and call center escalations by proactively informing users of backend status, eliminating confusion during delayed decisioning scenarios.</li>
+                  <li>Enhanced code maintainability and modularity by decoupling presentation logic from backend workflows, applying architecture best practices like centralized configuration and clean separation of UI content from backend logic.</li>
                 </ul>
               </div>
             </div>
@@ -417,7 +445,7 @@
                   <span class="modal-skill-badge">Performance</span>
                 </div>
                 <ul class="modal-project-list">
-                  <li>Independently planned, designed, and developed the council’s official website using HTML5, CSS3, Bootstrap, and JavaScript - now live and serving as the organization’s primary digital presence.</li>
+                  <li>Independently planned, designed, and developed the council's official website using HTML5, CSS3, Bootstrap, and JavaScript - now live and serving as the organization’s primary digital presence.</li>
                   <li>Transformed raw ideas into a live product, designing intuitive layouts, clean navigation, and accessible content that improved information flow and visitor engagement by 70% (based on stakeholder feedback).</li>
                   <li>Infused the website with vibrant animations, playful icons, and student-friendly illustrations, thoughtfully pairing colour themes, typography, and visual elements to reflect the organization’s personality and create a joyful, education-focused user experience.</li>
                   <li>Integrated downloadable study materials, brochures, and dynamic content sections, helping students and parents easily access academic resources.</li>
@@ -586,9 +614,10 @@
         const dropdown = document.getElementById('modal2-project-dropdown');
         const panels = [
           document.getElementById('modal2-proj1'),
-          document.getElementById('modal2-proj2')
+          document.getElementById('modal2-proj2'),
+          document.getElementById('modal2-proj3'),
         ];
-        if (dropdown && panels[0] && panels[1]) {
+        if (dropdown && panels[0] && panels[1] && panels[2]) {
           dropdown.addEventListener('change', function () {
             panels.forEach(panel => panel.classList.remove('active'));
             const selected = document.getElementById('modal2-' + dropdown.value);
